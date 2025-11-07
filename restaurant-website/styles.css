@@ -1,0 +1,258 @@
+/* Basic Reset - removes default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Body Styling */
+
+body {
+    background-color: #0E083A;
+    padding: 20px;
+}
+/* Background Variants */
+.bg-cream {
+  background-color: #F6EDD8;
+}
+
+/* Navigation Bar Container */
+.navbar {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #0E083A;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+/* Logo Styling */
+
+.logo img {
+    height: 70px;
+    width: auto;
+
+}
+
+/* Navigation Menu List */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar li {
+    display: inline;
+}
+
+/* Navigation Links */
+.navbar a {
+    color: #F6EDD8;
+    text-decoration: none;
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect for Navigation Links */
+.navbar a:hover {
+    color: #FA9393;
+}
+
+/* Hero Section with Image Background */
+.hero-section {
+    background-image: url('food-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    padding-bottom: 5px; 
+    border-radius: 10px;
+    margin-bottom: 60px;
+
+}
+/* Dark Overlay for Better Text Readability */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    border-radius: 20px;
+}
+/* Hero Headline */
+.hero-section h1 {
+font-family: 'Nanum Myeongjo', serif;
+  color: #f6edd8;
+  font-size: 50px;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+  line-height: 1.4;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.hero-section span {
+  display: block;
+  font-size: 26px;
+  color: #f6edd8;
+}
+
+/* Content Section Layout */
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+/* Image Box Styling */
+.image-box img {
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Text Module Styling */
+.text-module {
+    max-width: 400px;
+    text-align: left;
+}
+
+.text-module h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.text-module p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Menu Section Styling */
+.menu-section {
+  max-width: 1400px;
+  margin: 80px auto;
+  gap: 80px;
+  padding: 0 20px;
+}
+
+/* Menu Container: always two columns */
+.menu-container {
+  display: flex;
+  flex-direction: row; /* stays side by side even on small screens */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: nowrap; /* prevents stacking */
+}
+
+/* Left Column: Images */
+.menu-images {
+  min-width: 300px%;
+  max-width: 350px;
+}
+
+.menu-images img {
+  width: 100%;
+  height: 400%;
+  max-height: 500px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Right Column: Text */
+.menu-text {
+  flex-grow: 1;
+  min-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.subcategory {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.subcategory-image img {
+  flex-shrink: 0;
+  width: 340px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-top: 25px; /* aligns image with the section heading */
+}
+
+.subcategory-text {
+  flex: 1;
+  text-align: left;
+}
+
+/* H1: Menu Type */
+.menu-section h1 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 48px;
+  color: #0E083A;  /* deep blue */
+  margin-bottom: 20px;
+}
+
+/* H2: Subcategories */
+.menu-section h2 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 32px;
+  color: #2F9172;  /* green */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(47,145,114,0.3);
+  padding-bottom: 5px;
+}
+
+
+/* Add bullets only to the sake list */
+ul.menu-items.sake-list li {
+  font-family: 'Quicksand';
+  font-size: 18px;
+  color:#000;
+  line height:1.7;
+  margin-bottom: 10px;
+  list-style: disc inside;
+  padding-left: 20px;
+}
+
+.sake-subtitle {
+  font-family: 'Quicksand';
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin: 25px 0 10px 0;
+}
+
+.menu-items li {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  color: #000; /* black text */
+  line-height: 1.7;
+  margin-bottom: 10px;
+  list-style: none;
+}
