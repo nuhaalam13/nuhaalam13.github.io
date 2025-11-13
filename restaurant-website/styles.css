@@ -10,6 +10,8 @@ body {
     background-color: #0E083A;
     padding: 20px;
 }
+
+
 /* Background Variants */
 .bg-cream {
   background-color: #F6EDD8;
@@ -27,6 +29,7 @@ body {
     border-radius: 10px;
 }
 
+
 /* Logo Styling */
 
 .logo img {
@@ -34,6 +37,14 @@ body {
     width: auto;
 
 }
+
+/* Upright Logo Styling */
+
+.upright-logo img {
+    height: 250px;
+    width: auto;
+}
+
 
 /* Navigation Menu List */
 .navbar ul {
@@ -127,23 +138,6 @@ font-family: 'Nanum Myeongjo', serif;
     object-fit: cover;
 }
 
-/* Text Module Styling */
-.text-module {
-    max-width: 400px;
-    text-align: left;
-}
-
-.text-module h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.text-module p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #666;
-}
 
 /* Menu Section Styling */
 .menu-section {
@@ -255,4 +249,132 @@ ul.menu-items.sake-list li {
   line-height: 1.7;
   margin-bottom: 10px;
   list-style: none;
+}
+
+/* Text Module Styling */
+.text-module h1 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 48px;
+  color: #0E083A;  /* deep blue */
+  margin-bottom: 20px;
+}
+
+.text-module h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.text-module p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.9em;
+    color: #0E083A; 
+    line-height: 1.7;
+    margin-bottom: 10px;
+    padding-inline: 18em;
+    list-style: none;
+}
+
+/* Contact Section */
+
+.contact-section h1 {
+    font-family: 'Nanum Myeongjo', serif;
+    color: #f6edd8;
+    font-size: 48px;
+}
+.contact-section p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    color:#FA9393;
+}
+
+.container {
+  display: flex;
+  gap: 0.01em;
+  justify-content: space-between;
+}
+
+.column {
+  flex: 1;
+  padding-inline: 5px;
+}
+
+/* Reservation Page Styling */
+
+.reservation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 40px 20px;
+}
+
+.reservation-box {
+  background-color: #F6EDD8;
+  padding: 50px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.reservation-box h1 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 42px;
+  color: #0E083A;
+  margin-bottom: 10px;
+}
+
+.reservation-box p {
+  font-family: 'Quicksand', sans-serif;
+  color: #2F9172;
+  margin-bottom: 30px;
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.reservation-form label {
+  font-family: 'Quicksand', sans-serif;
+  color: #0E083A;
+  font-weight: 600;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  outline: none;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus {
+  border-color: #2F9172;
+}
+
+.reserve-btn {
+  background-color: #FA9393;
+  color: #F6EDD8;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.reserve-btn:hover {
+  background-color: #C14B7B;
 }
