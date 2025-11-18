@@ -1,171 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant Menu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background-color: #F6EDD8;
-      padding: 40px;
-    }
-
-    .menu-section {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .menu-text h1 {
-      font-family: 'Nanum Myeongjo', serif;
-      font-size: 40px;
-      color: #0E083A;
-      margin-top: 60px;
-      margin-bottom: 20px;
-    }
-
-    .subcategory {
-      display: flex;
-      align-items: flex-start;
-      gap: 40px;
-      margin-top: 40px;
-    }
-
-    .subcategory-image img {
-      width: 340px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      margin-top: 25px;
-    }
-
-    .subcategory-text {
-      flex: 1;
-    }
-
-    .subcategory-text h2 {
-      font-family: 'Nanum Myeongjo', serif;
-      font-size: 28px;
-      color: #2F9172;
-      margin-bottom: 10px;
-      border-bottom: 1px solid rgba(47, 145, 114, 0.3);
-      padding-bottom: 4px;
-    }
-
-    .menu-items {
-      list-style: none;
-      padding: 0;
-    }
-
-    .menu-items li {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 18px;
-      color: #000;
-      line-height: 1.7;
-      margin-bottom: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo" rel="stylesheet">
 </head>
-<body>
-  <section class="menu-section">
 
-    <!-- 🥢 Lunch Menu -->
-    <div class="menu-text">
-      <h1>Lunch Menu</h1>
+<body class="menu-page bg-cream">
 
-      <div class="subcategory">
-        <div class="subcategory-image">
-          <img src="vietnamese-roll.png" alt="Vietnamese Roll">
-        </div>
-        <div class="subcategory-text">
-          <h2>Appetizers</h2>
-          <ul class="menu-items">
-            <li><strong>Miso Soup</strong> – miso broth with tofu and seaweed</li>
-            <li><strong>Edamame</strong> – steamed soybeans with sea salt</li>
-          </ul>
-        </div>
-      </div>
+<div class="menu-wrapper">
 
-      <div class="subcategory">
-        <div class="subcategory-image">
-          <img src="rainbow-roll.png" alt="Rainbow Roll">
-        </div>
-        <div class="subcategory-text">
-          <h2>Sushi Rolls</h2>
-          <ul class="menu-items">
-            <li><strong>Poke Bowl</strong> – marinated tuna with rice and avocado</li>
-            <li><strong>Teriyaki Salmon Bowl</strong> – salmon, rice, and veggies</li>
-          </ul>
-        </div>
-      </div>
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="Restaurant Logo">
+    </div>
+    <ul>
+        <li><a href="index.html" class="active">home</a></li>
+        <li><a href="menu.html" class="active">menu</a></li>
+        <li><a href="reservation.html" class="active">reservation</a></li>
+        <li><a href="about.html" class="active">about</a></li>
+        <li><a href="contact.html" class="active">contact</a></li>
+    </ul>
+</div>
+
+<!-- LUNCH SECTION -->
+<section class="menu-section">
+<div class="menu-text">
+
+<h1>Lunch Menu</h1>
+
+<div class="subcategory">
+    <div class="subcategory-image">
+        <img src="vietnamese-roll.png" alt="Vietnamese Roll">
     </div>
 
-    <!-- 🍜 Dinner Menu -->
-    <div class="menu-text">
-      <h1>Dinner Menu</h1>
+    <div class="subcategory-text">
+        <h2>Appetizers</h2>
+        <ul class="menu-items">
+            <li><strong>Miso Soup</strong><br>Traditional miso broth with tofu, seaweed, and scallions</li>
+            <li><strong>Edamame</strong><br>Steamed soybeans with sea salt</li>
+            <li><strong>Vietnamese Summer Rolls</strong><br>Shrimp, vermicelli, lettuce, and herbs wrapped in rice paper, served with peanut hoisin dipping sauce</li>
+            <li><strong>Spicy Tuna Tartare</strong><br>Diced spicy tuna, avocado, cucumber, and crispy wontons</li>
+            <li><strong>Thai Chicken Satay</strong><br>Grilled marinated chicken skewers served with peanut dipping sauce</li>
+        </ul>
+    </div>
+</div>
 
-      <div class="subcategory">
-        <div class="subcategory-image">
-          <img src="https://via.placeholder.com/340x220?text=Dinner+Appetizers" alt="Dinner Appetizers">
-        </div>
-        <div class="subcategory-text">
-          <h2>Appetizers</h2>
-          <ul class="menu-items">
-            <li><strong>Tempura Shrimp</strong> – crispy battered shrimp</li>
-            <li><strong>Crab Rangoon</strong> – fried wontons with crab and cream cheese</li>
-          </ul>
-        </div>
-      </div>
+<h2>Lunch Bowls</h2>
+<ul class="menu-items">
+    <li><strong>Sushi Lunch Set</strong><br>5 pieces of nigiri and a California roll</li>
+    <li><strong>Teriyaki Salmon Bowl</strong><br>Grilled salmon with rice and veggies</li>
+    <li><strong>Poke Bowl</strong><br>Tuna or salmon with seaweed, avocado, and sesame</li>
+    <li><strong>Pad Thai Lunch Bowl</strong><br>Rice noodles with tofu, peanuts, sprouts, and tamarind sauce</li>
+    <li><strong>Vietnamese Vermicelli Bowl</strong><br>Lemongrass chicken or beef with herbs and peanuts</li>
+</ul>
 
-      <div class="subcategory">
-        <div class="subcategory-image">
-          <img src="https://via.placeholder.com/340x220?text=Dinner+Entrees" alt="Dinner Entrees">
-        </div>
-        <div class="subcategory-text">
-          <h2>Entrées</h2>
-          <ul class="menu-items">
-            <li><strong>Grilled Miso Cod</strong> – miso-marinated black cod</li>
-            <li><strong>Thai Green Curry</strong> – coconut curry with chicken and basil</li>
-          </ul>
-        </div>
-      </div>
+<div class="subcategory">
+    <div class="subcategory-image">
+        <img src="rainbow-roll.png" alt="Rainbow Roll">
     </div>
 
-    <!-- 🍰 Dessert -->
-    <div class="menu-text">
-      <h1>Dessert</h1>
-      <div class="subcategory">
-        <div class="subcategory-image">
-          <img src="https://via.placeholder.com/340x220?text=Dessert" alt="Dessert">
-        </div>
-        <div class="subcategory-text">
-          <h2>Desserts</h2>
-          <ul class="menu-items">
-            <li><strong>Mochi Ice Cream</strong> – mango, green tea, or strawberry</li>
-            <li><strong>Matcha Cheesecake</strong> – green tea cheesecake with crust</li>
-          </ul>
-        </div>
-      </div>
+    <div class="subcategory-text">
+        <h2>Sushi Rolls</h2>
+        <ul class="menu-items">
+            <li><strong>Ezo Special Roll</strong><br>Tuna, spicy mayo, cucumber</li>
+            <li><strong>California Roll</strong><br>Crab stick, avocado, cucumber</li>
+            <li><strong>Dragon Roll</strong><br>Eel, avocado, cucumber</li>
+            <li><strong>Rainbow Roll</strong><br>California roll topped with sashimi</li>
+            <li><strong>Tempura Shrimp Roll</strong><br>Tempura shrimp, avocado, spicy mayo</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+</section>
+
+
+<!-- DINNER SECTION -->
+<section class="menu-section">
+<div class="menu-text">
+
+<h1>Dinner Menu</h1>
+
+<h2>Appetizers</h2>
+<ul class="menu-items">
+    <li><strong>Tuna Tataki</strong><br>Seared tuna with ponzu</li>
+    <li><strong>Thai Fish Cakes</strong><br>Served with cucumber relish</li>
+    <li><strong>Vietnamese Grilled Pork Skewers</strong><br>Marinated pork with pickled vegetables</li>
+    <li><strong>Crab Rangoon</strong><br>Crab + cream cheese wontons</li>
+    <li><strong>Shiso Tempura Shrimp</strong><br>Tempura shrimp wrapped in shiso</li>
+</ul>
+
+<div class="subcategory">
+    <div class="subcategory-image">
+        <img src="papaya-salad.jpg" alt="Papaya Salad">
     </div>
 
-    <!-- 🍹 Drinks -->
-    <div class="menu-text">
-      <h1>Drinks</h1>
-      <div class="subcategory">
-        <div class="subcategory-image">
-          <img src="https://via.placeholder.com/340x220?text=Drinks" alt="Drinks">
-        </div>
-        <div class="subcategory-text">
-          <h2>Craft Cocktails</h2>
-          <ul class="menu-items">
-            <li><strong>Lychee Martini</strong> – vodka and lychee puree</li>
-            <li><strong>Tokyo Mule</strong> – vodka, ginger beer, and yuzu</li>
-          </ul>
-        </div>
-      </div>
+    <div class="subcategory-text">
+        <h2>Salads</h2>
+        <ul class="menu-items">
+            <li><strong>Seaweed Salad</strong><br>Sesame dressing</li>
+            <li><strong>Papaya Salad</strong><br>Green papaya with lime and peanuts</li>
+            <li><strong>House Salad</strong><br>Mixed greens with sesame ginger dressing</li>
+            <li><strong>Grilled Thai Beef Salad</strong><br>Beef with herbs + lime dressing</li>
+        </ul>
+
+        <h2>Sushi and Sashimi</h2>
+        <ul class="menu-items">
+            <li><strong>Chef's Choice Platter</strong><br>10 nigiri + tuna roll</li>
+            <li><strong>Sashimi Platter</strong><br>12 pieces assorted sashimi</li>
+        </ul>
+    </div>
+</div>
+
+<div class="subcategory">
+    <div class="subcategory-image">
+        <img src="ezo-roll.png" alt="Ezo Roll">
     </div>
 
-  </section>
+    <div class="subcategory-text">
+        <h2>Speciality Rolls</h2>
+        <ul class="menu-items">
+            <li><strong>Ezo Signature Roll</strong><br>Spicy tuna + seared salmon</li>
+            <li><strong>Tropical Roll</strong><br>Shrimp tempura + mango</li>
+            <li><strong>Crispy Volcano Roll</strong><br>Deep-fried spicy crab</li>
+            <li><strong>Shiso Garden Roll</strong><br>Vegetarian roll</li>
+        </ul>
+
+        <h2>Entrees</h2>
+        <ul class="menu-items">
+            <li><strong>Grilled Miso Black Cod</strong><br>Silky miso-marinated cod</li>
+            <li><strong>Pho with Wagyu Beef</strong><br>Vietnamese broth with wagyu</li>
+            <li><strong>Thai Green Curry</strong><br>Coconut curry with chicken</li>
+            <li><strong>Tempura Udon</strong><br>Udon with shrimp tempura</li>
+            <li><strong>Crispy Peking Duck</strong><br>Duck with pancakes + hoisin</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+</section>
+
+
+<!-- DESSERTS -->
+<section class="menu-section">
+<div class="menu-text">
+
+    <h1>Desserts</h1>
+
+    <ul class="menu-items">
+        <li><strong>Mochi Ice Cream</strong><br>Mango, green tea, or strawberry</li>
+        <li><strong>Coconut Sticky Rice with Mango</strong><br>Sticky rice + coconut sauce</li>
+        <li><strong>Matcha Cheesecake</strong><br>Green tea cheesecake</li>
+        <li><strong>Lychee Sorbet</strong><br>Refreshing lychee sorbet</li>
+    </ul>
+
+</div>
+</section>
+
+
+
+<!-- DRINKS -->
+<section class="menu-section">
+
+<div class="menu-text">
+<h1>Drinks</h1>
+
+<h2>Craft Cocktails</h2>
+<ul class="menu-items">
+    <li><strong>Lychee Martini</strong><br>Vodka + lychee puree</li>
+    <li><strong>Pandan Gin Fizz</strong><br>Gin + pandan</li>
+    <li><strong>Pineapple Shiso Smash</strong><br>Pineapple + shiso + rum</li>
+    <li><strong>Tokyo Mule</strong><br>Vodka + ginger beer + yuzu</li>
+</ul>
+</div>
+
+</section>
+
+
+<!-- SAKE -->
+<section class="menu-section">
+
+<div class="subcategory">
+    <div class="subcategory-image">
+        <img src="manju-sake.png" alt="Sake">
+    </div>
+
+    <div class="subcategory-text">
+
+        <h2>Sake Menu</h2>
+
+        <p class="sake-subtitle">Junmai (Pure Rice)</p>
+        <ul class="menu-items sake-list">
+            <li><strong>Hakkasan Junmai</strong><br>Crisp + dry</li>
+            <li><strong>Shichida Junmai</strong><br>Full-bodied umami</li>
+            <li><strong>Kikusui Junmai</strong><br>Light, melon notes</li>
+        </ul>
+
+        <p class="sake-subtitle">Junmai Ginjo</p>
+        <ul class="menu-items sake-list">
+            <li><strong>Dassai 50</strong><br>Tropical + peach</li>
+            <li><strong>Suigei Ginjo</strong><br>Dry with acidity</li>
+            <li><strong>Tedorigawa "Lady Luck"</strong><br>Floral + crisp</li>
+        </ul>
+
+        <p class="sake-subtitle">Daiginjo</p>
+        <ul class="menu-items sake-list">
+            <li><strong>Kubota Manju</strong><br>Elegant + silky</li>
+            <li><strong>Katsuyama Ken</strong><br>Velvety pear notes</li>
+            <li><strong>Tatsuriki Chotokusen</strong><br>Complex + fruity</li>
+        </ul>
+
+        <p class="sake-subtitle">Nigori</p>
+        <ul class="menu-items sake-list">
+            <li><strong>Sayuri Nigori</strong><br>Creamy + coconut</li>
+            <li><strong>Shiro Sasa Nigori</strong><br>Rich + banana</li>
+        </ul>
+
+        <p class="sake-subtitle">Sparkling Sake</p>
+        <ul class="menu-items sake-list">
+            <li><strong>Dassai Sparkling</strong><br>Crisp + fruity</li>
+            <li><strong>Mio Sparkling</strong><br>Light + sweet</li>
+        </ul>
+
+        <p class="sake-subtitle">Speciality Sake</p>
+        <ul class="menu-items sake-list">
+            <li><strong>Eikun "Sleeping Beauty"</strong><br>Silky + floral</li>
+            <li><strong>Isojiman Tokubetsu</strong><br>Fresh + mineral</li>
+        </ul>
+
+        <h2>Beer</h2>
+        <ul class="menu-items">
+            <li><strong>Asahi</strong></li>
+            <li><strong>Sapporo</strong></li>
+            <li><strong>Singha</strong></li>
+            <li><strong>Tsingtao</strong></li>
+        </ul>
+
+    </div>
+</div>
+
+</section>
+
+</div>
+
 </body>
 </html>
