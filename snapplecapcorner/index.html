@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Snapple Cap Corner — Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap' rel='stylesheet'>
+</head>
+<body>
+
+<h1 class="site-title">Welcome to the Snapple Cap Corner!</h1>
+<p class="subtitle">Pick a cap, any cap...</p>
+
+<div class="index-grid">
+
+  <!-- 1. Animal Facts (cap 1) -->
+ <div class="index-item" onclick="playPopAndGo('animal-facts.html')">
+      <img src="images/silver-back.png" alt="Animal Facts">
+      <span class="hover-label">Animal Facts</span>
+    </a>
+  </div>
+
+  <!-- 2. Weird US Facts (cap 2) -->
+<div class="index-item" onclick="playPopAndGo('weird-us-facts.html')">
+      <img src="images/green-back.png" alt="Weird US Facts">
+      <span class="hover-label">Weird US Facts</span>
+    </a>
+  </div>
+
+  <!-- 3. Historical Facts (cap 1) -->
+<div class="index-item" onclick="playPopAndGo('historical-facts.html')">
+      <img src="images/silver-back.png" alt="Historical Facts">
+      <span class="hover-label">Historical Facts</span>
+    </a>
+  </div>
+
+  <!-- 4. Science Facts (cap 2) -->
+<div class="index-item" onclick="playPopAndGo('science-facts.html')">
+      <img src="images/green-back.png" alt="Science Facts">
+      <span class="hover-label">Science Facts</span>
+    </a>
+  </div>
+
+  <!-- 5. Random Fact (cap 1) -->
+  <div class="index-item" onclick="playPopAndGo('random-fact.html')">
+      <img src="images/silver-back.png" alt="Random Fact">
+      <span class="hover-label">Random Fact</span>
+    </a>
+  </div>
+
+</div>
+
+<audio id="pop-sound" src="audio/cap-open.mp3"></audio>
+<script>
+function playPopAndGo(url) {
+    const sound = document.getElementById("pop-sound");
+    sound.currentTime = 0;
+    
+    // Play the sound
+    sound.play().then(() => {
+        // Navigate only after the audio ends
+        sound.onended = () => {
+            window.location.href = url;
+        };
+    }).catch(() => {
+        // fallback: navigate if audio fails
+        window.location.href = url;
+    });
+}
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Fact!</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap' rel='stylesheet'>
+</head>
+<body>
+<h1 class="title">Pop the cap for a fact!</h1>
+
+<div class="cap-wrapper">
+  <!-- Hidden checkbox controls CSS flip -->
+  <input type="checkbox" id="flip-toggle">
+
+  <!-- Cap card -->
+  <div class="cap-card">
+    <!-- Front of cap -->
+    <label for="flip-toggle" class="cap-face cap-front">
+      <img src="images/silver-back.png" alt="Snapple Bottle Cap Front">
+    </label>
+    <!-- Back of cap -->
+    <label for="flip-toggle" class="cap-face cap-back">
+      <img id="fact-img" src="images/placeholder.png" alt="Snapple Fact">
+    </label>
+
+  </div>
+
+</div>
+<audio id="pop-sound" src="audio/cap-open.mp3"></audio>
+<script src="script.js"></script>
+</body>
+</html>

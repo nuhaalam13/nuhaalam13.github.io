@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Animal Facts Gallery</title>
+<link rel="stylesheet" href="styles.css">
+<link href='https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h1 class="title">Animal Facts</h1>
+
+<div class="gallery-grid">
+  <div class="gallery-item" onclick="openFact('fact1', this)">
+    <img src="images/lobster-conga.png" alt="Fact 1">
+  </div>
+  <div class="gallery-item" onclick="openFact('fact2', this)">
+    <img src="images/bee-eyelids.png" alt="Fact 2">
+  </div>
+  <div class="gallery-item" onclick="openFact('fact3', this)">
+    <img src="images/biggest-pig.png" alt="Fact 3">
+  </div>
+  <div class="gallery-item" onclick="openFact('fact4', this)">
+    <img src="images/goldfish.png" alt="Fact 4">
+  </div>
+  <div class="gallery-item" onclick="openFact('fact5', this)">
+    <img src="images/oldest-clam.png" alt="Fact 5">
+  </div>
+</div>
+
+<!-- Wikipedia-style Fact Popup -->
+<div id="fact-popup" class="fact-popup" onclick="outsideClick(event)">
+  <div class="fact-content">
+    <span class="close" onclick="closeFact()">&times;</span>
+    <div class="popup-img-wrapper">
+      <img id="popup-img" src="" alt="Fact Image">
+    </div>
+    <h2 id="fact-title">Fact</h2>
+    <p id="fact-text"></p>
+    <button onclick="checkFact()">Fact Checker</button>
+    <p id="checker-result"></p>
+  </div>
+</div>
+
+<audio id="pop-sound" src="audio/cap-open.mp3"></audio>
+
+<script>
+// Fact data
+const facts = {
+  fact1: "Spiny lobsters use their antennae to connect and travel in a line.",
+  fact2: "Bees do have 5 eyes, but none of them have eyelids! They sleep with their eyes open.",
+  fact3: "Actually, it was even heavier than a ton! Big Bill was a Poland-China hog that weighed 2,552 lb.",
+  fact4: "Goldfish pigment reacts to light, so they can lose some of their color when kept in darkness.",
+  fact5: "Ming the clam was one of the oldest animals, but it's actually 507 years old! It was named for the Ming Dynasty, when it was born."
+};
+
+// Fact titles
+const factTitles = {
+  fact1: "Spiny Lobster Conga",
+  fact2: "Bee Eyelids",
+  fact3: "Biggest Pig",
+  fact4: "Goldfish in Dark Room",
+  fact5: "Oldest Animal"
+};
+
+// Fact truth data
+const factTruth = {
+  fact1: true,
+  fact2: false,
+  fact3: false,
+  fact4: true,
+  fact5: false
+};
+
+function openFact(factId, element) {
+  const sound = document.getElementById("pop-sound");
+  sound.currentTime = 0;
+  sound.play();
+
+  // Set popup image source
+  const imgSrc = element.querySelector('img').src;
+  document.getElementById('popup-img').src = imgSrc;
+
+  // Show popup
+  document.getElementById("fact-title").innerText = factTitles[factId];
+  document.getElementById("fact-text").innerText = facts[factId];
+  document.getElementById("checker-result").innerText = "";
+  document.getElementById("fact-popup").style.display = "flex";
+  document.getElementById("fact-popup").dataset.current = factId;
+}
+
+function closeFact() {
+  document.getElementById("fact-popup").style.display = "none";
+}
+
+function checkFact() {
+  const factId = document.getElementById("fact-popup").dataset.current;
+  const result = factTruth[factId] ? "✅ This fact is true!" : "❌ This fact is false :(";
+  document.getElementById("checker-result").innerText = result;
+}
+
+function outsideClick(event) {
+  const content = document.querySelector('.fact-content');
+  if (!content.contains(event.target)) {
+    closeFact();
+  }
+}
+</script>
+
+</body>
+</html>
