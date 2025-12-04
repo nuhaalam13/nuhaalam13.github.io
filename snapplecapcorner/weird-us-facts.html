@@ -2,30 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Animal Facts Gallery</title>
+<title>Weird U.S. Facts Gallery</title>
 <link rel="stylesheet" href="styles.css">
 <link href='https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap' rel='stylesheet'>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<h1 class="title">Animal Facts</h1>
+<h1 class="title">Weird U.S. Facts</h1>
 
 <div class="gallery-grid">
   <div class="gallery-item" onclick="openFact('fact1', this)">
-    <img src="images/lobster-conga.png" alt="Fact 1">
+    <img src="images/alaska-caribou.png" alt="Fact 1">
   </div>
   <div class="gallery-item" onclick="openFact('fact2', this)">
-    <img src="images/bee-eyelids.png" alt="Fact 2">
+    <img src="images/cat-spy.png" alt="Fact 2">
   </div>
   <div class="gallery-item" onclick="openFact('fact3', this)">
-    <img src="images/biggest-pig.png" alt="Fact 3">
+    <img src="images/liberty-feet.png" alt="Fact 3">
   </div>
   <div class="gallery-item" onclick="openFact('fact4', this)">
-    <img src="images/goldfish.png" alt="Fact 4">
+    <img src="images/oregon-ghost.png" alt="Fact 4">
   </div>
   <div class="gallery-item" onclick="openFact('fact5', this)">
-    <img src="images/oldest-clam.png" alt="Fact 5">
+    <img src="images/texas-space-ballot.png" alt="Fact 5">
   </div>
 </div>
 
@@ -48,28 +48,28 @@
 <script>
 // Fact data
 const facts = {
-  fact1: "Spiny lobsters use their antennae to connect and travel in a line.",
-  fact2: "Bees do have 5 eyes, but none of them have eyelids! They sleep with their eyes open.",
-  fact3: "Actually, it was even heavier than a ton! Big Bill was a Poland-China hog that weighed 2,552 lb.",
-  fact4: "Goldfish pigment reacts to light, so they can lose some of their color when kept in darkness.",
-  fact5: "Ming the clam was one of the oldest animals, but it's actually 507 years old! It was named for the Ming Dynasty, when it was born."
+  fact1: "Alaska has a population of around 740,000, while their caribou ranges around 750,000. There used to be a bigger difference, but the caribou population has been in decline :(",
+  fact2: "The CIA launched Acoustic Kitty, implanting mics and radio transmitters in cats to spy on Soviet embassies.",
+  fact3: "The Statue of Liberty's sandals are 25 feet long, so she does wear a size 879!",
+  fact4: "Texas actually has the most ghost towns, with a whopping 511!",
+  fact5: "Texas has written legislation allowing for this, but all NASA astronauts can vote absentee ballots regardless of state."
 };
 
 // Fact titles
 const factTitles = {
-  fact1: "Spiny Lobster Conga",
-  fact2: "Bee Eyelids",
-  fact3: "Biggest Pig",
-  fact4: "Goldfish in Dark Room",
-  fact5: "Oldest Animal"
+  fact1: "Caribou in Alaska",
+  fact2: "60s Cat Spies",
+  fact3: "Statue of Liberty Shoes",
+  fact4: "Ghost Towns in Oregon",
+  fact5: "Space Ballots in Texas"
 };
 
 // Fact truth data
 const factTruth = {
   fact1: true,
-  fact2: false,
-  fact3: false,
-  fact4: true,
+  fact2: true,
+  fact3: true,
+  fact4: false,
   fact5: false
 };
 

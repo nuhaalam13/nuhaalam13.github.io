@@ -2,30 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Animal Facts Gallery</title>
+<title>Historical Facts Gallery</title>
 <link rel="stylesheet" href="styles.css">
 <link href='https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap' rel='stylesheet'>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<h1 class="title">Animal Facts</h1>
+<h1 class="title">Historical Facts</h1>
 
 <div class="gallery-grid">
   <div class="gallery-item" onclick="openFact('fact1', this)">
-    <img src="images/lobster-conga.png" alt="Fact 1">
+    <img src="images/bubblewrap.png" alt="Fact 1">
   </div>
   <div class="gallery-item" onclick="openFact('fact2', this)">
-    <img src="images/bee-eyelids.png" alt="Fact 2">
+    <img src="images/firs-vcr.png" alt="Fact 2">
   </div>
   <div class="gallery-item" onclick="openFact('fact3', this)">
-    <img src="images/biggest-pig.png" alt="Fact 3">
+    <img src="images/mongolia-lemonade.png" alt="Fact 3">
   </div>
   <div class="gallery-item" onclick="openFact('fact4', this)">
-    <img src="images/goldfish.png" alt="Fact 4">
+    <img src="images/first-coaster.png" alt="Fact 4">
   </div>
   <div class="gallery-item" onclick="openFact('fact5', this)">
-    <img src="images/oldest-clam.png" alt="Fact 5">
+    <img src="images/sailor-earrings.png" alt="Fact 5">
   </div>
 </div>
 
@@ -48,29 +48,29 @@
 <script>
 // Fact data
 const facts = {
-  fact1: "Spiny lobsters use their antennae to connect and travel in a line.",
-  fact2: "Bees do have 5 eyes, but none of them have eyelids! They sleep with their eyes open.",
-  fact3: "Actually, it was even heavier than a ton! Big Bill was a Poland-China hog that weighed 2,552 lb.",
-  fact4: "Goldfish pigment reacts to light, so they can lose some of their color when kept in darkness.",
-  fact5: "Ming the clam was one of the oldest animals, but it's actually 507 years old! It was named for the Ming Dynasty, when it was born."
+  fact1: "Bubble wrap was made as a textured wallpaper in 1957, but wasn't very popular.",
+  fact2: "The VTR (video tape recorder, precursor to the VCR) was built in 1956 and was huge! It weighed around 900 lbs.",
+  fact3: "The first lemonade was made in 10th century Egypt, mixing lemon juice and sugar.",
+  fact4: "The Mauch Chunk Railway in Pennsylvania was used in 1827 for coal. It eventually became a tourist attraction and carried people for fun!",
+  fact5: "Sailors believed gold, as a precious metal, had magical properties and healed bad eyesight."
 };
 
 // Fact titles
 const factTitles = {
-  fact1: "Spiny Lobster Conga",
-  fact2: "Bee Eyelids",
-  fact3: "Biggest Pig",
-  fact4: "Goldfish in Dark Room",
-  fact5: "Oldest Animal"
+  fact1: "Bubble Wrap Origins",
+  fact2: "First VCR",
+  fact3: "First Lemonade",
+  fact4: "America's First Coaster",
+  fact5: "Sailor Superstitions"
 };
 
 // Fact truth data
 const factTruth = {
   fact1: true,
-  fact2: false,
+  fact2: true,
   fact3: false,
   fact4: true,
-  fact5: false
+  fact5: true
 };
 
 function openFact(factId, element) {
