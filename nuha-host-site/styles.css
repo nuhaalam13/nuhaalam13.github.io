@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #250514; /* your dark background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Handjet', sans-serif;
+  color: #EE99B0;
+}
+
+/* Main title */
+h1 {
+  font-family: 'Glass Antiqua', cursive;
+  color: #FF3C91;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Container */
+.heart-container {
+  position: relative;
+  width: 450px;
+  margin: 40px auto;
+}
+
+/* Full heart (default) */
+.heart-full {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.35s ease, transform 0.5s ease;
+}
+
+/* Wiggle */
+.heart-container:hover .heart-full {
+  animation: shy 1.4s ease-in-out infinite;
+}
+
+@keyframes shy {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Quadrants */
+.quad {
+  position: absolute;
+  width: 50%;          /* because each piece is half the heart */
+  height: 50%;         /* each piece is half vertically */
+  opacity: 0;
+  pointer-events: auto;
+  z-index: 3;
+  transition:
+    opacity 0.3s ease,
+    transform 0.35s cubic-bezier(.25,1.5,.45,1),
+    filter 0.3s ease;
+}
+
+.quad img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Glow + scale */
+.quad:hover {
+  opacity: 1;
+  filter: drop-shadow(0 0 10px #ff8ed4)
+          drop-shadow(0 0 20px #ff4fa3);
+  transform: scale(1.05);
+}
+
+/* Fade full heart */
+.heart-container:hover .heart-full {
+  opacity: 0.15;
+}
+
+/* Position each quadrant */
+.q1 { top: 0; left: 0; }   /* top-left */
+.q2 { top: 0; right: 0; }  /* top-right */
+.q3 { bottom: 0; left: 0; } /* bottom-left */
+.q4 { bottom: 0; right: 0; } /* bottom-right */
+
+/* Slide-out directions */
+.q1:hover { transform: translate(-12px, -12px) scale(1.05); }
+.q2:hover { transform: translate(12px, -12px) scale(1.05); }
+.q3:hover { transform: translate(-12px, 12px) scale(1.05); }
+.q4:hover { transform: translate(12px, 12px) scale(1.05); }
